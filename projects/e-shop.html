@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>閱森書店 專案詳情 | WeiQing's Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="site-branding">
+                <a href="../index.html">WeiQing's Web</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../about.html">關於我</a></li>
+                    <li><a href="../projects.html" class="active">專案作品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb">
+            <a href="../projects.html">← 返回作品集</a>
+        </div>
+        
+        <section class="detail-card card">
+            <div class="detail-header-simple">
+                <h1>閱森書店 | 線上購書平台</h1>
+                <p>多人協作開發：整合使用者、賣家與管理員的三方全端電商系統</p>
+            </div>
+            <div class="project-showcase">
+
+                <div class="showcase-text">
+                    <h3>專案簡介 | Project Overview</h3>
+                    <ul>
+                        <li><b>系統定位：</b>整合使用者、賣家與管理員需求的三方全端電商平台。</li>
+                        <li><b>核心技術：</b>基於 Nuxt 3 框架、PostgreSQL 資料庫與 Prisma ORM 開發。</li>
+                        <li><b>功能亮點：</b>包含完整購物流程、營收數據圖表、RBAC 權限管理與操作日誌。</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>我的開發角色 | Development Role</h3>
+                    <ul>
+                       <li><b>前端 UI/UX 實作：</b>使用 Nuxt 框架建立響應式介面，包含動態購物車、結帳流程與訂單詳情頁等等。</li>
+                        <li><b>API整合：</b>負責前後端數據對接，確保從使用者操作到資料庫異動的流程穩定。</li>
+                    </ul>
+                
+                </div>
+            </div>
+            <section class="tabs-carousel-section card">
+                <div class="section-title-wrap">
+                    <h3>系統角色功能展示 | System Showcase</h3>
+                </div>
+                
+                <div class="tabs-container">
+                    <button class="tab-btn active" onclick="openTab(event, 'user-role')">使用者端 (User)</button>
+                    <button class="tab-btn" onclick="openTab(event, 'vendor-role')">賣家中心 (Vendor)</button>
+                    <button class="tab-btn" onclick="openTab(event, 'admin-role')">管理後台 (Admin)</button>
+                </div>
+
+                <div id="user-role" class="tab-content active">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('user-role', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/user-home.png">
+                                <div class="slide-caption">
+                                    <h4>使用者端：購書主頁</h4>
+                                    <p>實作商品多維度分類篩選與即時關鍵字搜尋</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/user-detail.png">
+                                <div class="slide-caption">
+                                    <h4>使用者端：商品詳情</h4>
+                                    <p>動態串接資料庫顯示即時庫存與定價資訊，並實作「相關書籍」推薦邏輯</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/user-cart.png">
+                                <div class="slide-caption">
+                                    <h4>使用者端：購物車與結帳</h4>
+                                    <p>實作複雜的跨商家商品組合邏輯，支援即時增減數量、刪除商品與小計自動試算</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/user-order.png">
+                                <div class="slide-caption">
+                                    <h4>使用者端：結帳確認</h4>
+                                    <p>整合優惠券折抵邏輯，並串接信用卡模擬支付接口，確保交易數據的準確與安全性</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/user-order-detail.png">
+                                <div class="slide-caption">
+                                    <h4>使用者端：訂單歷史查詢</h4>
+                                    <p>提供個人化的訂單異動紀錄追蹤，讓使用者隨時掌握訂單狀態與詳細購買資訊</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('user-role', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div id="vendor-role" class="tab-content">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('vendor-role', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/vendor-shops.png"> <div class="slide-caption">
+                                    <h4>賣家端：多店鋪權限切換</h4>
+                                    <p>支援單一帳號管理多個商家實體，並即時顯示各店鋪審核狀態，展現靈活的權限切換邏輯。</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../images/vendor-dash.png"> <div class="slide-caption">
+                                    <h4>賣家端：營收數據視覺化</h4>
+                                    <p>整合每月營收統計圖表與近期訂單概覽，協助商家快速掌握銷售動態並支援報表匯出。</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../images/vendor-orders.png"> <div class="slide-caption">
+                                    <h4>賣家端：商務訂單管理</h4>
+                                    <p>提供結構化的訂單追蹤列表，包含買家資訊、金額與狀態，確保每筆交易流程清晰可辨。</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../images/vendor-staff.png"> <div class="slide-caption">
+                                    <h4>賣家端：RBAC 權限管理</h4>
+                                    <p>實作完善的團隊邀請機制與角色權限設定（OWNER, ADMIN, CLERK），精確分配操作權限。</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../images/vendor-logs.png"> <div class="slide-caption">
+                                    <h4>賣家端：嚴謹操作審計</h4>
+                                    <p>詳細紀錄每筆行政異動的時間、人員與行為，建立完整的系統溯源紀錄與安全監控。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('vendor-role', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div id="admin-role" class="tab-content">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('admin-role', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/admin-audit.jpg">
+                                <div class="slide-caption">
+                                    <h4>管理員：商家審核</h4>
+                                    <p>嚴謹的平台審核機制，確保入駐商家資訊真實性。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('admin-role', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </section>
+            
+
+            
+            <div class="tech-summary">
+                <h3>技術架構 | Architecture</h3>
+                <p>採用前後端分離架構，確保系統擴展性與維運效率。</p>
+                <div class="tech-tags-large">
+                    <span>Nuxt / Vue 3</span><span>PostgreSQL</span><span>Prisma</span><span>Cloudflare R2</span><span>Docker</span>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WeiQing Peng. All Rights Reserved.</p>
+    </footer>
+<script>
+        // 分頁切換功能
+        function openTab(evt, roleId) {
+            let contents = document.querySelectorAll(".tab-content");
+            contents.forEach(content => content.classList.remove("active"));
+            
+            let btns = document.querySelectorAll(".tab-btn");
+            btns.forEach(btn => btn.classList.remove("active"));
+            
+            document.getElementById(roleId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // 輪播切換功能 (指定 ID 才不會影響到其他輪播)
+        function changeSlide(roleId, direction) {
+            const container = document.getElementById(roleId);
+            const slides = container.querySelectorAll('.carousel-slide');
+            let currentIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+            
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>

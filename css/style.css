@@ -470,3 +470,372 @@ footer {
         height: 200px;
     }
 }
+/* ==========================================================================
+   專案詳情頁 (Project Detail) - 閱森書店專屬
+   ========================================================================== */
+
+/* 麵包屑導覽 */
+.breadcrumb {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-pink);
+}
+
+/* 第一區：Hero 標題與大圖 */
+.detail-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    padding: 60px 40px;
+    align-items: center;
+    background-color: #fff;
+}
+.detail-header-simple {
+    text-align: center;
+    padding: 80px 20px 40px 20px; /* 增加上方的空間 (80px) */
+}
+
+.detail-header-simple h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+.category-tag {
+    color: var(--accent-pink);
+    font-weight: bold;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 15px 0;
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 第二區：我的職責 (左圖右文 Showcase) */
+.project-showcase {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 40px;
+    background-color: #fcfaf2; /* 暖米色背景 */
+}
+
+.showcase-image {
+    flex: 1;
+}
+
+.showcase-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.showcase-text {
+    flex: 1;
+}
+
+.showcase-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.showcase-text h3::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: var(--accent-pink);
+    margin-top: 10px;
+}
+
+.showcase-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.showcase-text ul li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 第三區：三欄功能特點 */
+.detail-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.feature-item .feature-icon {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* 第四區：技術架構 */
+.tech-summary {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #fafbfc;
+}
+
+.tech-tags-large {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-tags-large span {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.arch-illustration {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arch-illustration img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* 底部按鈕 */
+.detail-footer {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* RWD 響應式調整 */
+@media (max-width: 992px) {
+    .detail-hero, .project-showcase {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .detail-features-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .hero-text, .showcase-text {
+        text-align: center;
+    }
+    
+    .showcase-text h3::after {
+        margin: 10px auto;
+    }
+}
+/* 分頁按鈕基礎 */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.tab-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--accent-pink);
+    background: white;
+    color: var(--accent-pink);
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tab-btn.active, .tab-btn:hover {
+    background: var(--accent-pink);
+    color: white;
+}
+
+/* 內容隱藏顯示 */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+}
+
+/* 核心輪播樣式 - 回復你最愛的版本 */
+.carousel-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 500px;
+}
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.carousel-slide.active { display: block; }
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 重點：黑底半透明 Caption */
+/* 修正黑底半透明區塊 */
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* 加強底部黑色濃度，向上快速淡出 */
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.85) 0%, 
+        rgba(0, 0, 0, 0.6) 50%, 
+        transparent 100%);
+    color: #ffffff;
+    padding: 20px 25px; /* 稍微增加左右 padding 讓文字不貼邊 */
+    box-sizing: border-box;
+}
+
+/* 讓標題與內文增加陰影，這是「清晰度」的關鍵 */
+.slide-caption h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.2em;
+    color: var(--accent-pink); /* 確保粉色在黑底上飽和度夠高 */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* 增加文字陰影 */
+}
+
+.slide-caption p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400; /* 稍微加粗一點點 */
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 增加文字陰影 */
+}
+/* 左右按鈕 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2em;
+    backdrop-filter: blur(5px);
+}
+.prev { left: -70px; }
+.next { right: -70px; }
+
+@media (max-width: 1050px) {
+    .prev { left: 10px; }
+    .next { right: 10px; }
+}
+/* --- 統一全域專案詳情頁排版 (修正置中與間距) --- */
+
+/* 1. 讓系統展示區塊與上方開發角色區塊對齊 */
+.tabs-carousel-section {
+    text-align: center;      /* 標題與按鈕強制置中 */
+    padding: 80px 40px;      /* 統一上下內距 (與 .project-showcase 一致) */
+    background-color: #fff;  /* 保持乾淨白色底 */
+}
+
+/* 2. 標題與副標題的間距修正 */
+.section-title-wrap {
+    margin-bottom: 50px;     /* 標題下方的留白，讓視覺不擁擠 */
+}
+
+.section-title-wrap h3 {
+    font-size: 1.8em;        /* 與上方 h3 字體大小對齊 */
+    margin-bottom: 15px;
+}
+
+.section-title-wrap p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* 3. 分頁按鈕容器置中 */
+.tabs-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 20px;               /* 增加按鈕間距 */
+    margin-bottom: 40px;     /* 與下方輪播圖的距離 */
+}
+
+/* 4. 輪播容器強制居中 */
+.carousel-wrapper {
+    margin: 0 auto !important; /* 強制水平居中 */
+    max-width: 900px;
+}
+
+/* 5. 保持圖片說明文字靠左 (閱讀比較專業) */
+.slide-caption {
+    text-align: left;        /* 僅有圖片內的文字說明維持左對齊 */
+}
+
+/* 幫功能展示區的標題加上粉色長條 */
+.section-title-wrap h3 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section-title-wrap h3::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: var(--accent-pink);
+    margin: 15px auto 0; /* auto 確保長條水平置中 */
+}
