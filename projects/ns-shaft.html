@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小朋友下樓梯 | WeiQing's Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="site-branding"><a href="../index.html">WeiQing's Web</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../about.html">關於我</a></li>
+                    <li><a href="../projects.html" class="active">專案作品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb"><a href="../projects.html">← 返回作品集</a></div>
+        
+        <section class="detail-card card">
+            <div class="detail-header-simple">
+                <h1>小朋友下樓梯 | NS-SHAFT</h1>
+                <p>大二物件導向程式設計實習：兩人協作開發經典遊戲重製</p>
+            </div>
+
+            <div class="project-showcase">
+                <div class="showcase-text">
+                    <h3>專案簡介 | Project Overview</h3>
+                    <ul>
+                        <li><b>開發目的：</b>透過經典遊戲開發實踐 Java 物件導向程式設計 (OOP) 之核心概念。</li>
+                        <li><b>專案性質：</b>兩人合作開發之課程實習專案。</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>我的開發角色 | Development Role</h3>
+                    <ul>
+                       <li><b>遊戲視覺與 UI 實作：</b>負責遊戲封面、GameOver 結算頁面之視覺設計與 UI 元件刻劃。</li>
+                        <li><b>角色互動與死亡邏輯：</b>實作角色的血量判定機制，包含「掉落陷阱」與「碰撞障礙物扣血」等關鍵死亡條件，確保遊玩公平性。</li>
+                        <li><b>關卡機制與遊戲模式：</b>設計多元樓梯（左右移動、不規則樓梯），並實作「搜集點數系統」與「無限模式」，增加遊戲的耐玩度。</li>
+                        <li><b>素材收集與整合：</b>統籌基礎遊戲物件素材及使用Figma做頁面設計，並負責將不同關卡（一至五關）的內容進行最終整合。</li>
+                    </ul>
+
+                    <div class="tech-badge-container">
+                        <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+                        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma Design">
+                        <img src="https://img.shields.io/badge/OOP-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="OOP">
+                        <img src="https://img.shields.io/badge/Swing_/_AWT-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Swing / AWT">
+                        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-section">
+                <div class="showcase-text">
+                    <h3>技術挑戰 | Technical Challenges</h3>
+                    <ul>
+                        <<li>
+                            <b>挑戰一：多樣化樓梯的動態行為處理</b><br>
+                            <span>💡 解決：針對不同類型的樓梯（如左右移動樓梯、不規則樓梯）實作獨立的行為邏輯，並確保角色在樓梯移動時能順暢地跟隨其位移。</span>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <b>挑戰二：多關卡整合與數據統計</b><br>
+                            <span>💡 解決：串聯第一至第五關的遊戲流程，並實作點數搜集與結帳邏輯，確保玩家在進入下一關時，分數能正確累加並顯示在結算畫面中。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="architecture-section">
+                <div class="showcase-text" style="padding-bottom: 80px;">
+                    <h3>專案成果 | Results</h3>
+                    <ul>
+                        <li><b>OOP 應用實踐：</b>成功將物件導向程式設計之理論概念應用於實際遊戲架構，程式碼具備良好的擴展性。</li>
+                        <li><b>流暢體驗：</b>透過物件池優化，確保高遊戲頻率運作下畫面依然流暢、無卡頓。</li>
+                        <li><b>團隊協作：</b>導入 <b>Plane</b> 專案管理工具進行任務分配，並使用 <b>Git</b> 進行版本控制，順利完成團隊間的程式碼整合與除錯。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WeiQing Peng. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
