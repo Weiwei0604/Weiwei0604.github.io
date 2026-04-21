@@ -1,0 +1,472 @@
+/*==================================================
+  1. Base Styles & Morandi Variables
+==================================================*/
+:root {
+    /* 主色調：莫蘭迪霧霾藍 */
+    --primary-color: #8fa5c2;
+    --primary-muted: #afc0d6;
+    
+    /* 輔助色調 */
+    --accent-pink: #d8b8b8; /* 莫蘭迪粉 */
+    --accent-green: #b8c7b8; /* 莫蘭迪綠 */
+    --tips-bg: #fdf6e3;      /* 莫蘭迪淺黃/奶茶色 (Tips區塊) */
+    --btn-bg: #e9ecef;       /* 低飽和度按鈕灰 */
+    
+    /* 文字與背景 */
+    --text-color: #333;
+    --text-muted: #666;
+    --bg-color: #f7f9fb; /* 極淺的藍灰色背景 */
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+    /* 字體 */
+    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Noto Sans TC', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-sans); /* 標題統一使用中文無襯線更現代 */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 莫蘭迪卡片風 */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden; /* 防止內容溢出圓角 */
+}
+
+/*==================================================
+  2. Layout & Header
+==================================================*/
+header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-branding {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.site-branding .tagline {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: var(--text-muted);
+    margin-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-pink);
+    color: #fff;
+}
+
+/*==================================================
+  3. Main Area - Index Page Hero
+==================================================*/
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text-card {
+    padding: 60px;
+}
+
+.hero-text-card h2 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero-text-card p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.hero-visual-area {
+    position: relative;
+}
+
+.home-hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.decoration-box {
+    position: absolute;
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.decoration-pink {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent-pink);
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+}
+
+.decoration-green {
+    width: 150px;
+    height: 150px;
+    background-color: var(--accent-green);
+    bottom: -30px;
+    right: -30px;
+    z-index: -1;
+}
+
+/* 按鈕樣式 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-muted);
+}
+
+/*==================================================
+  4. About Page - Profile Layout (左圖右文)
+==================================================*/
+
+
+/* 上半部：圖文並排 */
+.profile-header {
+    display: flex;
+    align-items: center;    /* 改為居中對齊，看起來更和諧 */
+    gap: 40px;
+    padding: 40px 40px 20px 40px; /* 底部留白少一點，因為接下面 */
+}
+
+.profile-image-side {
+    flex-shrink: 0;
+}
+
+.avatar-small-left {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-pink); 
+    box-shadow: var(--shadow);
+}
+
+.profile-text-side {
+    flex-grow: 1;
+}
+
+.name-title {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+/* 下半部：佔滿全寬 */
+.profile-bottom-content {
+    padding: 0 40px 40px 40px; /* 左右與上方對齊，下方留白 */
+}
+
+.tips-box {
+    background-color: var(--tips-bg);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 25px; /* 改為 margin-bottom */
+    border-left: 5px solid #eee8d5;
+    width: 100%;          /* 確保佔滿 */
+}
+
+.social-links-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;             /* 讓兩個按鈕平均分配寬度佔滿全寬 */
+    justify-content: center;
+    background-color: var(--btn-bg);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+/*==================================================
+  5. Resume Section (工作經歷)
+==================================================*/
+.resume-section {
+    padding: 50px 60px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.experience-item {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.exp-header h4 {
+    font-size: 1.3em;
+    color: var(--text-color);
+}
+
+.exp-header .date {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    font-weight: bold;
+}
+
+.exp-tags {
+    margin-bottom: 15px;
+}
+
+.exp-tags span {
+    background: var(--accent-pink);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.exp-details {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/*==================================================
+  6. Footer
+==================================================*/
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/*==================================================
+  7. Mobile Responsive
+==================================================*/
+@media (max-width: 900px) {
+    .header-container {
+        padding: 15px 20px;
+    }
+    
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .profile-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .social-links-grid {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .social-btn {
+        justify-content: center;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .about-hero {
+        padding: 20px;
+        margin-bottom: 60px; /* 將這裡的數值調大（例如從 40px 改成 60px） */
+    }
+    
+    .avatar-round {
+        width: 200px;
+        height: 200px;
+    }
+}
+/*==================================================
+  8. Projects Page Style (專案作品頁面)
+==================================================*/
+.projects-page .page-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2em;
+    color: var(--primary-color);
+}
+
+/* 建立網格布局：大螢幕 2 欄 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* 專案卡片效果 */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* 懸浮時往上飄 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 專案圖片處理 */
+.project-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* 確保圖片不變形地填滿區域 */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.project-tags {
+    margin-bottom: 12px;
+}
+
+.project-tags span {
+    background: var(--accent-pink);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.project-content p {
+    color: var(--text-muted);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-text {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.btn-text:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+/* RWD 適應：手機版改為單欄 */
+@media (max-width: 850px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-image img {
+        height: 200px;
+    }
+}
