@@ -37,7 +37,7 @@ body {
     background-color: var(--bg-color);
     line-height: 1.6;
     scroll-behavior: smooth;
-    zoom: 0.9; 
+    zoom: 0.8; 
 }
 
 h1, h2, h3, h4 {
