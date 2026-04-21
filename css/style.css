@@ -529,7 +529,9 @@ footer {
     text-align: center;
     background-color: #fff;
 }
-
+.architecture-section + .architecture-section {
+    padding-top: 0 !important;   /* 當兩個 architecture-section 相連時，取消第二個的上方內距 */
+}
 .arch-desc {
     font-size: 1.1em;
     line-height: 2;
