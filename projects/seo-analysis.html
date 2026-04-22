@@ -34,7 +34,7 @@
                 <div class="showcase-text">
                     <h3>專案簡介 | Project Overview</h3>
                     <ul>
-                        <li><b>開發目的：</b>自動抓取 Google 前 10 名文章並拆解關鍵實體，將搜尋結果量化分析</li>
+                        <li><b>開發目的：</b>抓取 Google 前 10 名結果並分析關鍵實體，將內容數據化。</li>
                         <li><b>專案性質：</b>全端實作專案，整合爬蟲、資料庫與前端視覺化分析。</li>
                     </ul>
 
@@ -44,14 +44,14 @@
                     <ul>
                         <li><b>資料管線建構：</b>使用 Google Apps Script 串接 SerpApi，自動抓取搜尋結果並寫入 Google Sheets。</li>
                         <li><b>語意分析設計：</b>實作 entity 計數與主題分類（電信業者、資費、流量等）。</li>
-                        <li><b>前端儀表板開發：</b>以 Next.js + Recharts 建立互動式分析視覺化頁面。</li>
+                        <li><b>前端儀表板開發：</b>以 Next.js + Recharts 建立視覺化分析Dashboard。</li>
                     </ul>
 
                     <h3>核心系統說明 | Core Systems</h3>
                     <ul>
-                        <li><b>數據爬取 (GAS)：</b>串接 SerpApi 自動抓取關鍵字「4G 吃到飽」前 10 名Google文章，取代人工搜尋</li>
-                        <li><b>雲端儲存：</b>將分析數據存於 Supabase 資料庫</li>
-                        <li><b>數據價值：</b>透過 Entity 出現頻率分析「搜尋共識」，反推 Google 偏好的 SEO 內容模板</li>
+                        <li><b>數據爬取 (GAS)：</b>串接 SerpApi 自動抓取關鍵字「4G 吃到飽」前 10 名Google文章，取代人工搜尋。</li>
+                        <li><b>雲端儲存：</b>將分析數據存於 Supabase 資料庫。</li>
+                        <li><b>數據價值：</b>透過 entity 分析找出 SEO 內容規律。</li>
                         </li>
                     </ul>
                     <div class="tech-badge-container">
@@ -94,21 +94,21 @@
                                 <img src="../images/4g-dashboard.png" alt="數據分析儀表板">
                                 <div class="slide-caption">
                                     <h4>數據視覺化儀表板</h4>
-                                    <p>利用 Next.js 與 Recharts 將 SEO 實體數據轉化為動態圖表。</p>
+                                    <p>利用 Next.js 與 Recharts 將 SEO 實體數據轉化為圖表</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
                                 <img src="../images/4g-search-result.png" alt="搜尋結果分析">
                                 <div class="slide-caption">
                                     <h4>搜尋結果實體統計</h4>
-                                    <p>自動計算前 10 名文章的實體數量，找出 Google 文章的內容特徵。</p>
+                                    <p>自動計算前 10 名文章的實體數量，找出關鍵內容特徵</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
                                 <img src="../images/4g-login-ui.png" alt="登入介面">
                                 <div class="slide-caption">
                                     <h4>安全性登入牆</h4>
-                                    <p>實作 Supabase Auth 驗證機制，確保分析數據僅限授權用戶存取。</p>
+                                    <p>實作 Supabase Auth 驗證機制，確保分析數據僅限授權用戶存取</p>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                                 <img src="../images/4g-origin-data.png" alt="原始數據">
                                 <div class="slide-caption">
                                     <h4>原始搜尋數據</h4>
-                                    <p>透過 SerpApi 蒐集之原始數據，包含標題、描述和連結等資訊。</p>
+                                    <p>透過 SerpApi 蒐集的原始數據，包含標題、描述和連結等資訊。</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
@@ -138,7 +138,7 @@
                                 <img src="../images/supabase-db.png" alt="雲端資料庫">
                                 <div class="slide-caption">
                                     <h4>PostgreSQL 數據儲存</h4>
-                                    <p>將處理後的結構化數據儲存於 Supabase 資料庫，提升檢索效率。</p>
+                                    <p>將處理後的結構化數據儲存於 Supabase 資料庫。</p>
                                 </div>
                             </div>
                         </div>
@@ -163,21 +163,18 @@
                 <div class="showcase-text" style="padding-bottom: 80px;">
                     <h3>專案成果 | Results</h3>
                     <ul>
-                        <li><b>決策輔助：</b>可依據數據制定內容策略，提高文章排名機率。</li>
+                        <li><b>決策輔助：</b>可依據數據制定SEO內容策略。</li>
                         <li><b>系統化能力：</b>完成從資料蒐集到視覺化的完整分析系統。</li>
                      </ul>
-                </div>
-            </div>
-            <div class="architecture-section">
-                <div class="showcase-text">
-                    <h3>未來展望 | Future Roadmap</h3>
+                    <h3 style="margin-top: 100px;">未來展望 | Future Roadmap</h3>
                     <ul>
-                        <li><b>AI SEO 寫作引擎：</b>預計導入 n8n 與 OpenAI API，利用分析出的實體結構自動生成高排名潛力的文章。</li>
+                        <li><b>AI SEO 寫作引擎：</b>預計導入 n8n 與 OpenAI API，利用分析出的數據自動生成文章。</li>
                         <li><b>SEO 策略模板化：</b>透過歷史數據反推，為不同關鍵字自動產出內容優化建議。</li>
-                        <li><b>競爭對手監控：</b>建立自動化追蹤機制，即時監控上榜網站的內容變動。</li>
+                        <li><b>競爭對手監控：</b>建立自動化追蹤機制，即時監控網站排名的內容變動。</li>
                     </ul>
                 </div>
             </div>
+            
         </section>
     </main>
 

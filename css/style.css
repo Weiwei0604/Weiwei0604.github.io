@@ -7,15 +7,15 @@
     --primary-muted: #afc0d6;
     
     /* 輔助色調 */
-    --accent-pink: #d8b8b8; /* 莫蘭迪粉 */
-    --accent-green: #b8c7b8; /* 莫蘭迪綠 */
-    --tips-bg: #fdf6e3;      /* 莫蘭迪淺黃/奶茶色 (Tips區塊) */
-    --btn-bg: #e9ecef;       /* 低飽和度按鈕灰 */
+    --accent-pink: #d8b8b8; 
+    --accent-green: #b8c7b8; 
+    --tips-bg: #fdf6e3;     
+    --btn-bg: #e9ecef;       
     
     /* 文字與背景 */
     --text-color: #333;
     --text-muted: #666;
-    --bg-color: #f7f9fb; /* 極淺的藍灰色背景 */
+    --bg-color: #f7f9fb; 
     --card-bg: #fff;
     --border-color: #e0e0e0;
     --shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -37,16 +37,16 @@ body {
     background-color: var(--bg-color);
     line-height: 1.6;
     scroll-behavior: smooth;
-    zoom: 0.85; 
+    zoom: 0.9; 
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 關鍵：強制 body 至少佔滿 100% 的螢幕高度 */
+    min-height: 100vh; /* 強制 body 至少佔滿 100% 的螢幕高度 */
 }
-/* 確保 footer 寬度正確 */
+
 footer {
     width: 100%;
-    margin-top: auto; /* 保險起見，再次確保它在最底部 */
+    margin-top: auto; 
 }
 h1, h2, h3, h4 {
     font-family: var(--font-sans);
@@ -130,6 +130,7 @@ nav a.active {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 40px;
+    
 }
 
 .hero-section {
@@ -444,10 +445,10 @@ footer {
     color: var(--accent-pink);
 }
 
-/* 頁面大標題 */
+
 .detail-header-simple {
     text-align: center;
-    padding: 100px 20px 60px 20px; /* 增加上方呼吸感 */
+    padding: 100px 20px 60px 20px; 
 }
 
 .detail-header-simple h1 {
@@ -460,18 +461,18 @@ footer {
 .showcase-text h3, 
 .section-title-wrap h3 {
     font-size: 1.8em;
-    margin: 50px; /* 留空間給粉色線與下方文字 */
+    margin: 50px; 
     position: relative;
-    display: inline-block; /* 讓寬度等於文字長度，確保置中準確 */
+    display: inline-block; 
     text-align: center;
 }
 
-/* 統一粉色長條線 (絕對位置置中法) */
+/* 統一粉色長條線  */
 .showcase-text h3::after, 
 .section-title-wrap h3::after {
     content: "";
     display: block;
-    width: 250px;           /* 妳要求的加長版長度 */
+    width: 250px;          
     height: 4px;
     background: var(--accent-pink);
     position: absolute;
@@ -489,7 +490,7 @@ footer {
     text-align: center;
     gap: 60px;
     padding: 80px 40px;
-    background-color: #fcfaf2; /* 暖米色背景 */
+    background-color: #fcfaf2;
 }
 
 .showcase-text {
@@ -506,11 +507,11 @@ footer {
 
 .showcase-text ul li {
     margin-bottom: 18px;
-    line-height: 2; /* 增加行距，不擁擠 */
+    line-height: 2; 
     font-size: 1.1em;
 }
 
-/* 技術徽章 (長方形 Shields 風格) */
+
 .tech-badge-container {
     display: flex;
     justify-content: center;
@@ -538,7 +539,7 @@ footer {
     background-color: #fff;
 }
 .architecture-section + .architecture-section {
-    padding-top: 0 !important;   /* 當兩個 architecture-section 相連時，取消第二個的上方內距 */
+    padding-top: 0 !important;   
 }
 .arch-desc {
     font-size: 1.1em;
@@ -577,9 +578,7 @@ footer {
 .carousel-container img {
     width: 100%;
     height: 100%;
-    /* 關鍵：將 cover 改成 contain，確保圖片完整顯示不被裁切 */
     object-fit: contain !important; 
-    /* 確保背景是黑色的，這樣 contain 產生的留白會跟圖片融合 */
     background-color: #ffffff; 
 }
 .section-title-wrap p {
@@ -625,7 +624,7 @@ footer {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    height: 450px; /* 稍微加高增加大氣感 */
+    height: 450px; 
 }
 
 .carousel-slide {
@@ -679,21 +678,20 @@ footer {
     border: none;
     width: 55px;
     height: 55px;
-    border-radius: 50%; /* 變成圓形 */
+    border-radius: 50%; 
     cursor:pointer;
     z-index: 10;
     font-size: 1.3em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}/* 滑鼠移上去時變亮一點 */
+}
 .carousel-btn:hover {
     background: rgba(0, 0, 0, 0.8);
-    transform: translateY(-50%) scale(1.1); /* 稍微放大 */
+    transform: translateY(-50%) scale(1.1);
 }
 
 .prev { left: -75px; }
 .next { right: -75px; }
 
-/* 標籤切換動畫 */
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: fadeIn 0.5s ease forwards; }
 
@@ -703,30 +701,27 @@ footer {
 }
 
 /*==================================================
-  automa 長圖專用滾動容器 (統一風格，增加視窗感)
+  automa 長圖專用滾動容器 
 ==================================================*/
 
 
-/* 針對 Automa 長圖的特殊容器 */
 .workflow-scroll-container {
     max-width: 900px;
     margin: 0 auto;
-    height: 600px;         /* 設定一個固定高度 */
-    overflow-y: scroll;    /* 允許垂直滾動 */
+    height: 600px;         
+    overflow-y: scroll;   
     border: 1px solid #eee;
     border-radius: 15px;
     background: #f9f9f9;
     padding: 20px;
-    box-shadow: inset 0 2px 10px rgba(0,0,0,0.05); /* 內陰影增加「視窗感」 */
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.05); 
 }
 
 .workflow-image {
-    width: 100%;           /* 寬度撐滿容器 */
-    height: auto;          /* 高度自動 */
+    width: 100%;           
+    height: auto;          
     display: block;
 }
-
-/* 自定義滾動條樣式，讓它跟妳的粉色主題更搭 */
 .workflow-scroll-container::-webkit-scrollbar {
     width: 8px;
 }
