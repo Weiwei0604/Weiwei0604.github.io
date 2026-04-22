@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「4G 吃到飽」SEO語意分析工具 | WeiQing's Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="site-branding"><a href="../index.html">WeiQing's Web</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../about.html">關於我</a></li>
+                    <li><a href="../projects.html" class="active">專案作品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb"><a href="../projects.html">← 返回作品集</a></div>
+        
+        <section class="detail-card card">
+            <div class="detail-header-simple">
+                <h1>4G 吃到飽 SEO 語意分析工具</h1>
+                <p>全端實作專案 × 搜尋結果語意解析 × SEO決策輔助系統</p>
+            </div>
+
+            <div class="project-showcase">
+                <div class="showcase-text">
+                    <h3>專案簡介 | Project Overview</h3>
+                    <ul>
+                        <li><b>開發目的：</b>自動抓取 Google 前 10 名文章並拆解關鍵實體，將搜尋結果量化分析</li>
+                        <li><b>專案性質：</b>全端實作專案，整合爬蟲、資料庫與前端視覺化分析。</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>我的開發角色 | Development Role</h3>
+                    <ul>
+                        <li><b>資料管線建構：</b>使用 Google Apps Script 串接 SerpApi，自動抓取搜尋結果並寫入 Google Sheets。</li>
+                        <li><b>語意分析設計：</b>實作 entity 計數與主題分類（電信業者、資費、流量等）。</li>
+                        <li><b>前端儀表板開發：</b>以 Next.js + Recharts 建立互動式分析視覺化頁面。</li>
+                    </ul>
+
+                    <h3>核心系統說明 | Core Systems</h3>
+                    <ul>
+                        <li><b>數據爬取 (GAS)：</b>串接 SerpApi 自動抓取關鍵字「4G 吃到飽」前 10 名Google文章，取代人工搜尋</li>
+                        <li><b>雲端儲存：</b>將分析數據存於 Supabase 資料庫</li>
+                        <li><b>數據價值：</b>透過 Entity 出現頻率分析「搜尋共識」，反推 Google 偏好的 SEO 內容模板</li>
+                        </li>
+                    </ul>
+                    <div class="tech-badge-container">
+                        <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
+                        <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
+                        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+                        <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="GAS">
+                        <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+                    </div>
+
+                </div>
+            </div>
+            <section class="tabs-carousel-section card" style="background: none; box-shadow: none;">
+                <div style="margin: 10px 0 30px 0; display: flex; justify-content: center; gap: 20px;">
+                    <a href="https://4g-entity-dashboard.vercel.app/" target="_blank" style="text-decoration: none; background: #FF0000; color: white; padding: 10px 20px; border-radius: 6px; font-size: 0.95rem; display: flex; align-items: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <span style="margin-right: 8px;">▶</span> Demo
+                    </a>
+                </div>
+
+                <div style="background: #f8f9fa; border: 1px dashed #ccc; padding: 10px 30px; border-radius: 8px; text-align: center; font-size: 0.85rem; color: #555; width: fit-content; margin: -15px auto 30px auto;">
+                    <p style="margin: 0; font-weight: bold; color: #333;">🔒 測試帳號：</p>
+                    <span style="margin-right: 15px;">帳號：user@example.com</span>
+                    <span>密碼：123456</span>
+                </div>
+
+                <div class="section-title-wrap">
+                    <h3>系統功能展示 | System Showcase</h3>
+                </div>
+
+                <div class="tabs-container">
+                    <button class="tab-btn active" onclick="openTab(event, 'visual-design')">Dashboard</button>
+                    <button class="tab-btn" onclick="openTab(event, 'data-structure')">數據架構</button>
+                </div>
+
+                <div id="visual-design" class="tab-content active">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('visual-design', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/4g-dashboard.png" alt="數據分析儀表板">
+                                <div class="slide-caption">
+                                    <h4>數據視覺化儀表板</h4>
+                                    <p>利用 Next.js 與 Recharts 將 SEO 實體數據轉化為動態圖表。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/4g-search-result.png" alt="搜尋結果分析">
+                                <div class="slide-caption">
+                                    <h4>搜尋結果實體統計</h4>
+                                    <p>自動計算前 10 名文章的實體數量，找出 Google 文章的內容特徵。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/4g-login-ui.png" alt="登入介面">
+                                <div class="slide-caption">
+                                    <h4>安全性登入牆</h4>
+                                    <p>實作 Supabase Auth 驗證機制，確保分析數據僅限授權用戶存取。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('visual-design', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div id="data-structure" class="tab-content">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('data-structure', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/4g-origin-data.png" alt="原始數據">
+                                <div class="slide-caption">
+                                    <h4>原始搜尋數據</h4>
+                                    <p>透過 SerpApi 蒐集之原始數據，包含標題、描述和連結等資訊。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/sheet-summary.png" alt="Entity 統計">
+                                <div class="slide-caption">
+                                    <h4>Entity 語意統計</h4>
+                                    <p>對原始數據進行分類與頻率統計，作為 Dashboard 的核心數據來源。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/supabase-db.png" alt="雲端資料庫">
+                                <div class="slide-caption">
+                                    <h4>PostgreSQL 數據儲存</h4>
+                                    <p>將處理後的結構化數據儲存於 Supabase 資料庫，提升檢索效率。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('data-structure', 1)">&#10095;</button>
+                    </div>S
+                </div>
+            </section>
+            
+            <div class="architecture-section">
+                <div class="showcase-text">
+                    <h3>系統架構 | System Architecture </h3>
+                </div>
+                
+                <div class="workflow-scroll-container">
+                    <img src="../images/4g_entity_system_architecture.svg" alt="Automa Workflow Detailed" class="workflow-image">
+                </div>
+                <p style="color: #888; font-size: 0.85em; margin-top: 15px; text-align: center;">
+                    ( 提示：此圖為長格式流程，您可以上下滾動視窗查看完整細節 )
+                </p>
+            </div>
+            <div class="architecture-section">
+                <div class="showcase-text" style="padding-bottom: 80px;">
+                    <h3>專案成果 | Results</h3>
+                    <ul>
+                        <li><b>決策輔助：</b>可依據數據制定內容策略，提高文章排名機率。</li>
+                        <li><b>系統化能力：</b>完成從資料蒐集到視覺化的完整分析系統。</li>
+                     </ul>
+                </div>
+            </div>
+            <div class="architecture-section">
+                <div class="showcase-text">
+                    <h3>未來展望 | Future Roadmap</h3>
+                    <ul>
+                        <li><b>AI SEO 寫作引擎：</b>預計導入 n8n 與 OpenAI API，利用分析出的實體結構自動生成高排名潛力的文章。</li>
+                        <li><b>SEO 策略模板化：</b>透過歷史數據反推，為不同關鍵字自動產出內容優化建議。</li>
+                        <li><b>競爭對手監控：</b>建立自動化追蹤機制，即時監控上榜網站的內容變動。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WeiQing Peng. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // 分頁切換功能
+        function openTab(evt, roleId) {
+            let contents = document.querySelectorAll(".tab-content");
+            contents.forEach(content => content.classList.remove("active"));
+            
+            let btns = document.querySelectorAll(".tab-btn");
+            btns.forEach(btn => btn.classList.remove("active"));
+            
+            document.getElementById(roleId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // 輪播切換功能 (指定 ID 才不會影響到其他輪播)
+        function changeSlide(roleId, direction) {
+            const container = document.getElementById(roleId);
+            const slides = container.querySelectorAll('.carousel-slide');
+            let currentIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+            
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
