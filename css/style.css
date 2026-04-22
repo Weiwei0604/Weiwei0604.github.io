@@ -37,9 +37,17 @@ body {
     background-color: var(--bg-color);
     line-height: 1.6;
     scroll-behavior: smooth;
-    zoom: 0.8; 
+    zoom: 0.85; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 關鍵：強制 body 至少佔滿 100% 的螢幕高度 */
 }
-
+/* 確保 footer 寬度正確 */
+footer {
+    width: 100%;
+    margin-top: auto; /* 保險起見，再次確保它在最底部 */
+}
 h1, h2, h3, h4 {
     font-family: var(--font-sans);
     font-weight: 700;
