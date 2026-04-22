@@ -34,20 +34,27 @@
                 <div class="showcase-text">
                     <h3>專案簡介 | Project Overview</h3>
                     <ul>
-                        <li><b>開發目的：</b>透過經典遊戲開發實踐 Java 物件導向程式設計 (OOP) 之核心概念。</li>
-                        <li><b>專案性質：</b>兩人合作開發之課程實習專案。</li>
+                        <li><b>開發目的：</b>透過經典遊戲開發實踐 Java OOP 核心概念與實作。</li>
+                        <li><b>專案性質：</b>大二物件導向程式設計實習，兩人合作開發。</li>
                     </ul>
 
                     <br>
 
                     <h3>我的開發角色 | Development Role</h3>
                     <ul>
-                       <li><b>遊戲視覺與 UI 實作：</b>負責遊戲封面、GameOver 結算頁面之視覺設計與 UI 元件刻劃。</li>
-                        <li><b>角色互動與死亡邏輯：</b>實作角色的血量判定機制，包含「掉落陷阱」與「碰撞障礙物扣血」等關鍵死亡條件，確保遊玩公平性。</li>
-                        <li><b>關卡機制與遊戲模式：</b>設計多元樓梯（左右移動、不規則樓梯），並實作「搜集點數系統」與「無限模式」，增加遊戲的耐玩度。</li>
-                        <li><b>素材收集與整合：</b>統籌基礎遊戲物件素材及使用Figma做頁面設計，並負責將不同關卡（一至五關）的內容進行最終整合。</li>
+                        <li><b>視覺設計與系統整合：</b>使用 Figma 規劃 UI 並實作封面與結算頁，統籌全關卡素材整合。</li>
+                        <li><b>角色互動邏輯開發：</b>實作血量判定、掉落陷阱與碰撞扣血等核心死亡條件。</li>
+                        <li><b>關卡機制與遊戲模式：</b>設計多元樓梯行為（如消失、彈跳）、點數系統與無限模式機制。</li>
                     </ul>
 
+                    <h3>核心系統說明 | Core Systems</h3>
+                    <ul>
+                        <li><b>關卡模式：</b>採漸進難度，每關新增一項機制，須<b>集滿點數</b>方可過關。</li>
+                        <li><b>無限模式：</b>整合全關卡陷阱隨機出現，隨層數增加速度，且累積點數可<b>額外增加一顆心（生命值）</b></li>
+                        <li><b>兩者核心差異：</b>
+                        關卡模式注重「解鎖與學習新規則」；無限模式則專注於「長時存活與高難度挑戰」。
+                        </li>
+                    </ul>
                     <div class="tech-badge-container">
                         <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java">
                         <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma Design">
@@ -57,19 +64,108 @@
                     </div>
                 </div>
             </div>
+            <section class="tabs-carousel-section card" style="background: none; box-shadow: none;">
+                <div style="margin: 1px 0 30px 0; display: flex; justify-content: center; gap: 20px;">
+                    <a href="https://youtu.be/Ham_LqmwAyo?si=ZLg6Iwl6HXN3CKTO" target="_blank" style="text-decoration: none; background: #FF0000; color: white; padding: 10px 20px; border-radius: 6px; font-size: 0.95rem; display: flex; align-items: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <span style="margin-right: 8px;">▶</span> Game Demo
+                    </a>
+                </div>
+                <div class="section-title-wrap" >
+                    <h3>遊戲畫面展示 | Game Showcase</h3>
+                </div>
 
+                <div class="tabs-container">
+                    <button class="tab-btn active" onclick="openTab(event, 'visual-design')">視覺設計 (UI)</button>
+                    <button class="tab-btn" onclick="openTab(event, 'level-mechanics')">關卡機制 (Levels)</button>
+                </div>
+
+                <div id="visual-design" class="tab-content active">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('visual-design', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/game-cover.png" alt="遊戲封面">
+                                <div class="slide-caption">
+                                    <h4>遊戲封面與選單</h4>
+                                    <p>實作動態選項選單與場景切換邏輯</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/figma-design.png" alt="Figma 設計稿">
+                                <div class="slide-caption">
+                                    <h4>Figma 介面原型</h4>
+                                    <p>展示開發前期的設計草圖，確保遊戲中各項 UI 元件位置與配色的一致性。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/game-over.png" alt="GameOver 畫面">
+                                <div class="slide-caption">
+                                    <h4>GameOver 結算介面</h4>
+                                    <p>設計結束遊戲與重新開始選單</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/infinite-mode.png" alt="無限模式">
+                                <div class="slide-caption">
+                                    <h4>無限模式介面</h4>
+                                    <p>左上角即時顯示當前下樓層數，並在 UI 上整合了生命值的即時跳動反饋。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('visual-design', 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div id="level-mechanics" class="tab-content">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev" onclick="changeSlide('level-mechanics', -1)">&#10094;</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="../images/level-1.png" alt="第壹關">
+                                <div class="slide-caption">
+                                    <h4>第壹關：基礎熟悉</h4>
+                                    <p>實作人物移動、規則樓梯、重力感。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/level-2.png" alt="第貳關">
+                                <div class="slide-caption">
+                                    <h4>第貳關：威脅初現</h4>
+                                    <p>實作不規則長短樓梯與尖刺樓梯。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/level-3.png" alt="第參關">
+                                <div class="slide-caption">
+                                    <h4>第參關：消失樓梯邏輯</h4>
+                                    <p>實作左右移動樓梯、消失樓梯（3秒觸發）。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/level-4.png" alt="第肆關">
+                                <div class="slide-caption">
+                                    <h4>第肆關：反應測試</h4>
+                                    <p>實作彈跳樓梯、隨機掉落陷阱，考驗玩家反應。</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/level-5.png" alt="第伍關">
+                                <div class="slide-caption">
+                                    <h4>第伍關：極限挑戰</h4>
+                                    <p>實作隨機速度變化演算法，增加關卡不可預測性。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide('level-mechanics', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </section>
             <div class="architecture-section">
                 <div class="showcase-text">
                     <h3>技術挑戰 | Technical Challenges</h3>
                     <ul>
-                        <<li>
-                            <b>挑戰一：多樣化樓梯的動態行為處理</b><br>
-                            <span>💡 解決：針對不同類型的樓梯（如左右移動樓梯、不規則樓梯）實作獨立的行為邏輯，並確保角色在樓梯移動時能順暢地跟隨其位移。</span>
-                        </li>
-                        <li style="margin-top: 20px;">
-                            <b>挑戰二：多關卡整合與數據統計</b><br>
-                            <span>💡 解決：串聯第一至第五關的遊戲流程，並實作點數搜集與結帳邏輯，確保玩家在進入下一關時，分數能正確累加並顯示在結算畫面中。</span>
-                        </li>
+                        <li><b>樓梯行為：</b>針對移動與消失樓梯編寫獨立邏輯，解決角色位移跟隨的同步問題。</li>
+                        <li><b>數據串聯：</b>整合五大關卡流程，實作點數累計與跨關卡數據統計，確保結算精確。</li>
                     </ul>
                 </div>
             </div>
@@ -78,10 +174,10 @@
                 <div class="showcase-text" style="padding-bottom: 80px;">
                     <h3>專案成果 | Results</h3>
                     <ul>
-                        <li><b>OOP 應用實踐：</b>成功將物件導向程式設計之理論概念應用於實際遊戲架構，程式碼具備良好的擴展性。</li>
-                        <li><b>流暢體驗：</b>透過物件池優化，確保高遊戲頻率運作下畫面依然流暢、無卡頓。</li>
-                        <li><b>團隊協作：</b>導入 <b>Plane</b> 專案管理工具進行任務分配，並使用 <b>Git</b> 進行版本控制，順利完成團隊間的程式碼整合與除錯。</li>
-                    </ul>
+                        <li><b>效能優化：</b>透過物件重複利用機制減少記憶體消耗，確保遊戲運作順暢不卡頓。</li>
+                        <li><b>開發規範：</b>導入 Plane 管理進度並使用 Git 協作，實現團隊遠端合作與整合。</li>
+                        <li><b>OOP 應用實踐：</b>成功將OOP課程理論概念應用於實際遊戲架構。</li>                  
+                     </ul>
                 </div>
             </div>
         </section>
@@ -90,5 +186,29 @@
     <footer>
         <p>&copy; 2026 WeiQing Peng. All Rights Reserved.</p>
     </footer>
+    <script>
+        // 分頁切換功能
+        function openTab(evt, roleId) {
+            let contents = document.querySelectorAll(".tab-content");
+            contents.forEach(content => content.classList.remove("active"));
+            
+            let btns = document.querySelectorAll(".tab-btn");
+            btns.forEach(btn => btn.classList.remove("active"));
+            
+            document.getElementById(roleId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // 輪播切換功能 (指定 ID 才不會影響到其他輪播)
+        function changeSlide(roleId, direction) {
+            const container = document.getElementById(roleId);
+            const slides = container.querySelectorAll('.carousel-slide');
+            let currentIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+            
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
