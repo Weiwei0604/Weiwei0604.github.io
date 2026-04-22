@@ -41,7 +41,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 強制 body 至少佔滿 100% 的螢幕高度 */
+    min-height: 100vh; 
 }
 
 footer {
@@ -128,9 +128,10 @@ nav a.active {
 ==================================================*/
 .main-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 20px 0;
     padding: 0 40px;
-    
+    width: 90%;
+    margin: 0 auto;
 }
 
 .hero-section {
@@ -489,7 +490,7 @@ footer {
     align-items: center;
     text-align: center;
     gap: 60px;
-    padding: 80px 40px;
+    padding: 40px 40px;
     background-color: #fcfaf2;
 }
 
@@ -517,7 +518,7 @@ footer {
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-top: 35px;
+    margin: 60px 0 20px 0;
 }
 
 .tech-badge-container img {
@@ -571,7 +572,7 @@ footer {
 /* 系統展示區 (Tabs + Carousel) */
 .tabs-carousel-section {
     text-align: center;
-    padding: 80px 40px;
+    padding: 40px 40px;
     background-color: #fff;
     border-top: 1px solid #eee;
 }
@@ -676,8 +677,8 @@ footer {
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.6);
     border: none;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%; 
     cursor:pointer;
     z-index: 10;
@@ -689,8 +690,8 @@ footer {
     transform: translateY(-50%) scale(1.1);
 }
 
-.prev { left: -75px; }
-.next { right: -75px; }
+.prev { left: -60px; }
+.next { right: -60px; }
 
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: fadeIn 0.5s ease forwards; }
@@ -728,4 +729,75 @@ footer {
 .workflow-scroll-container::-webkit-scrollbar-thumb {
     background-color: var(--accent-pink);
     border-radius: 10px;
+}
+/*==================================================
+    Mobile Responsive (手機版優化)
+==================================================*/
+@media (max-width: 768px) {
+    body {
+        zoom: 1;
+    }
+    .header-container {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 5px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .hero-text-card {
+        padding: 30px;
+        text-align: center;
+    }
+    .home-hero-image {
+        height: 300px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .project-showcase {
+        padding: 40px 20px;
+    }
+    .showcase-text h3 {
+        font-size: 1.5em;
+        width: 80%; 
+    }
+    .showcase-text h3::after {
+        width: 150px;
+    }
+
+    .carousel-wrapper {
+        padding: 0 10px;
+    }
+    .carousel-container {
+        height: 300px; 
+    }
+    .prev { left: 5px; } 
+    .next { right: 5px; }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.4); 
+    }
+
+    .detail-card .test-account-box {
+        width: 95% !important;
+        padding: 15px !important;
+    }
+
+    .carousel-container img {
+        object-fit: contain !important;
+    }
 }
