@@ -126,12 +126,175 @@ nav a.active {
 /*==================================================
   3. Main Area - Index Page Hero
 ==================================================*/
+/* 封面海報專屬樣式 */
+.hero-poster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh; /* 確保高度足夠，撐開 Footer */
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.hero-info {
+    flex: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--accent-pink);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero-name .highlight {
+    color: var(--primary-color);
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.hero-bio {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-contact {
+    margin-bottom: 35px;
+    display: flex;
+    gap: 30px;
+}
+
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 幾何莫蘭迪背景 */
+.blob-bg {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: var(--primary-muted);
+    border-radius: 45% 55% 70% 30% / 30% 40% 60% 70%; /* 不規則圓形 */
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.hero-img {
+    position: relative;
+    z-index: 2;
+    width: 380px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+}
+/* 基礎設定 */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    position: relative;
+    z-index: 2; /* 照片層級在中間 */
+    width: 380px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.1);
+}
+
+.blob {
+    position: absolute;
+    opacity: 0.7;
+}
+
+/* --- 在照片下方的圖形 (z-index: 1) --- */
+
+.blob-sub-left {
+    width: 180px;
+    height: 180px;
+    background: #b8c7b8; /* 莫蘭迪綠 */
+    border-radius: 50%;
+    top: -20px;
+    left: -40px;
+    z-index: 1;
+}
+
+.blob-sub-right {
+    width: 250px;
+    height: 250px;
+    background: #d8b8b8; /* 莫蘭迪粉 */
+    /* 不規則形狀 */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    bottom: -30px;
+    right: -50px;
+    z-index: 1;
+}
+
+/* --- 在照片上方的圖形 (z-index: 3) --- */
+
+.blob-over-left {
+    width: 80px;
+    height: 80px;
+    background: #afc0d6; /* 莫蘭迪藍 */
+    border-radius: 15px;
+    transform: rotate(20deg);
+    bottom: 40px;
+    left: 10px;
+    z-index: 3; /* 覆蓋在照片邊緣 */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.blob-over-right {
+    width: 50px;
+    height: 50px;
+    background: #fdf6e3; /* 淺米色 */
+    border-radius: 50%;
+    top: 40px;
+    right: 40px;
+    z-index: 3; /* 覆蓋在照片右上角 */
+}
+
+/* 手機版適配 */
+@media (max-width: 768px) {
+    .hero-poster {
+        flex-direction: column-reverse; /* 手機上圖片在上，文字在下 */
+        text-align: center;
+    }
+    .hero-name { font-size: 2.5rem; }
+    .hero-contact { flex-direction: column; gap: 10px; }
+    .blob-bg { width: 300px; height: 300px; }
+    .hero-img { width: 280px; height: 350px; }
+}
 .main-container {
     max-width: 1200px;
-    margin: 20px 0;
+    margin: 100px 0 40px 0;
     padding: 0 40px;
     width: 90%;
     margin: 0 auto;
+    flex: 1;
 }
 
 .hero-section {
@@ -212,6 +375,9 @@ nav a.active {
 /*==================================================
   4. About Page - Profile Layout
 ==================================================*/
+.about-hero{
+    margin: 40px
+}
 .profile-header {
     display: flex;
     align-items: center;
@@ -279,24 +445,26 @@ nav a.active {
 ==================================================*/
 .resume-section {
     padding: 50px 60px;
+    margin:40px;
 }
 
 .section-title {
     font-size: 1.8em;
-    margin-bottom: 30px;
+    margin: 50px 0 30px 0;
     color: var(--primary-color);
+ 
 }
 
 .experience-item {
-    margin-bottom: 40px;
     padding-bottom: 20px;
+    
 }
 
 .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin: 30px 0 30px 0;
 }
 
 .exp-header h4 {
