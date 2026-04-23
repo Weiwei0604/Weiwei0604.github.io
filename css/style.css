@@ -23,7 +23,7 @@
     /* 字體 */
     --font-serif: 'Merriweather', serif;
     --font-sans: 'Noto Sans TC', sans-serif;
-    font-size: 14px
+    font-size: 12px
 }
 
 * {
@@ -212,9 +212,9 @@ nav a.active {
 
 .hero-img {
     position: relative;
-    z-index: 2; /* 照片層級在中間 */
-    width: 380px;
-    height: 480px;
+    z-index: 2; 
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: 15px 15px 50px rgba(0,0,0,0.1);
@@ -232,8 +232,8 @@ nav a.active {
     height: 180px;
     background: #b8c7b8; /* 莫蘭迪綠 */
     border-radius: 50%;
-    top: -20px;
-    left: -40px;
+    top: -30px;
+    left: 10px;
     z-index: 1;
 }
 
@@ -256,8 +256,8 @@ nav a.active {
     background: #afc0d6; /* 莫蘭迪藍 */
     border-radius: 15px;
     transform: rotate(20deg);
-    bottom: 40px;
-    left: 10px;
+    bottom: 20px;
+    left: 40px;
     z-index: 3; /* 覆蓋在照片邊緣 */
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
@@ -287,7 +287,7 @@ nav a.active {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 20px 40px 40px 40px;
     flex: 1;  
 }
 
@@ -370,7 +370,8 @@ nav a.active {
   4. About Page - Profile Layout
 ==================================================*/
 .about-hero{
-    margin: 40px
+    padding: 0 50px;
+    margin: 40px 0;
 }
 .profile-header {
     display: flex;
@@ -438,8 +439,8 @@ nav a.active {
   5. Resume Section
 ==================================================*/
 .resume-section {
-    padding: 30px 60px;
-    margin:40px;
+    padding: 30px 90px 60px 90px ; 
+    margin: 40px 0;  
 }
 
 .section-title {
@@ -611,7 +612,7 @@ footer {
 
 .detail-header-simple {
     text-align: center;
-    padding: 100px 20px 60px 20px; 
+    padding: 80px 20px 50px 20px; 
 }
 
 .detail-header-simple h1 {
@@ -652,7 +653,7 @@ footer {
     align-items: center;
     text-align: center;
     gap: 60px;
-    padding: 40px 40px;
+    padding: 30px 40px;
     background-color: #fcfaf2;
 }
 
@@ -680,7 +681,7 @@ footer {
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin: 60px 0 20px 0;
+    margin: 60px 0 40px 0;
 }
 
 .tech-badge-container img {
@@ -697,7 +698,7 @@ footer {
 
 /* 系統架構區塊 */
 .architecture-section {
-    padding: 50px 40px;
+    padding: 30px 40px;
     text-align: center;
     background-color: #fff;
 }
